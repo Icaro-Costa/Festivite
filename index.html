@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Festivite - Crie seu Convite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Festivite ✨</h1>
+        </div>
+    </header>
+
+    <main class="app-container">
+        
+        <section class="editor-panel">
+            <h2>Personalize seu Convite</h2>
+            
+            <form id="form-convite">
+                <fieldset>
+                    <legend>Informações do Evento</legend>
+                    <div class="form-group">
+                        <label for="titulo">Título do Evento:</label>
+                        <input type="text" id="titulo" name="titulo" placeholder="Ex: Aniversário de 30 anos" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="data">Data e Hora:</label>
+                        <input type="datetime-local" id="data" name="data" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="local">Local:</label>
+                        <input type="text" id="local" name="local" placeholder="Ex: Salão de Festas Principal" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao">Descrição Curta:</label>
+                        <textarea id="descricao" name="descricao" rows="3" placeholder="Ex: Venha comemorar comigo!"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Personalização</legend>
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label for="cor-fundo">Cor de Fundo:</label>
+                            <input type="color" id="cor-fundo" name="cor-fundo" value="#F0F4FF">
+                        </div>
+                        <div class="form-group">
+                            <label for="cor-texto">Cor do Texto:</label>
+                            <input type="color" id="cor-texto" name="cor-texto" value="#333333">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tema">Tema:</label>
+                        <select id="tema" name="tema">
+                            <option value="moderno">Moderno</option>
+                            <option value="classico">Clássico</option>
+                            <option value="divertido">Divertido</option>
+                            <option value="minimalista">Minimalista</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="imagem-url">URL da Imagem de Fundo:</label>
+                        <input type="url" id="imagem-url" name="imagem-url" placeholder="https://... (opcional)">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Finalização</legend>
+                    <div class="form-group">
+                        <label for="contato">Contato (Telefone/Email):</label>
+                        <input type="text" id="contato" name="contato" placeholder="Para confirmação de presença (RSVP)">
+                    </div>
+                    <div class="form-group-check">
+                        <input type="checkbox" id="termos" name="termos" required>
+                        <label for="termos">Eu confirmo que as informações estão corretas.</label>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-gerar">Gerar Convite</button>
+            </form>
+        </section>
+
+        <aside class="preview-panel">
+            <h2>Pré-visualização</h2>
+            
+            <div class="convite-card-preview">
+                <div class="convite-imagem" style="background-image: url('https://via.placeholder.com/400x200.png?text=Imagem+do+Evento');">
+                </div>
+                
+                <div class="convite-conteudo">
+                    <h3 class="convite-titulo">[Título do Evento]</h3>
+                    
+                    <div class="convite-info">
+                        <p><strong>Quando:</strong> [Data e Hora]</p>
+                        <p><strong>Onde:</strong> [Local do Evento]</p>
+                    </div>
+                    
+                    <p class="convite-descricao">[Sua descrição curta aparecerá aqui.]</p>
+                    
+                    <div class="convite-rsvp">
+                        <p>Confirme sua presença: [Seu Contato]</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+</body>
+</html>
